@@ -32,6 +32,10 @@ app.get('/ping', (req, res) => {
     res.send('PONG');
 })
 
+app.get("/", (req, res) => {
+    res.send("FreelanceCo API is running 🚀");
+});
+
 // CORS configuration
 const allowedOrigins = [
     'http://localhost:5173',
