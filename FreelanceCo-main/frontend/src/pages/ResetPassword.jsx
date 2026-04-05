@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import Particles from '../components/ui/background';
+import { API_BASE_URL } from '../config/api';
 
 export default function ResetPassword() {
     const [newPassword, setNewPassword] = useState('');
@@ -45,7 +46,7 @@ export default function ResetPassword() {
         setIsLoading(true);
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/reset-password`, {
+            const response = await fetch(`${API_BASE_URL}/auth/reset-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

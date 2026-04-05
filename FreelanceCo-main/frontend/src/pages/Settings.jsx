@@ -19,7 +19,7 @@ import {
 import { HiOutlineExclamationTriangle } from 'react-icons/hi2';
 import SkillsAutocompleteInput from '../components/ui/SkillsAutocompleteInput';
 
-const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL as API_URL } from '../config/api';
 
 // Custom styles for react-select with dark mode support
 const getCustomSelectStyles = (isDark) => ({

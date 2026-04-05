@@ -20,7 +20,7 @@ import {
     HiChevronUp
 } from 'react-icons/hi';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../config/api';
 
 export default function MyProjects() {
     const { user } = useAuth();
@@ -247,19 +247,19 @@ export default function MyProjects() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                         <div className="glass-surface border border-emerald-100/70 dark:border-emerald-900/50 rounded-lg p-4">
                             <p className="text-2xl font-light text-gray-700 dark:text-gray-200">
-                                <AnimatedCounter value={stats.total} duration={1800}/>
+                                <AnimatedCounter value={stats.total} duration={1800} />
                             </p>
                             <p className="text-xs text-gray-500 dark:text-gray-400 font-light">Total Projects</p>
                         </div>
                         <div className="glass-surface border border-emerald-100/70 dark:border-emerald-900/50 rounded-lg p-4">
                             <p className="text-2xl font-light text-green-600 dark:text-green-500">
-                                <AnimatedCounter value={stats.open} duration={1800}/>
+                                <AnimatedCounter value={stats.open} duration={1800} />
                             </p>
                             <p className="text-xs text-gray-500 dark:text-gray-400 font-light">Open</p>
                         </div>
                         <div className="glass-surface border border-emerald-100/70 dark:border-emerald-900/50 rounded-lg p-4">
                             <p className="text-2xl font-light text-gray-700 dark:text-gray-200">
-                                <AnimatedCounter value={stats.totalProposals} duration={1800}/>
+                                <AnimatedCounter value={stats.totalProposals} duration={1800} />
                             </p>
                             <p className="text-xs text-gray-500 dark:text-gray-400 font-light">Total Proposals</p>
                         </div>
@@ -615,10 +615,10 @@ export default function MyProjects() {
                                                                 {app.aiScore !== null && app.aiScore !== undefined ? (
                                                                     <div className="relative group/score">
                                                                         <span className={`px-2 py-0.5 text-xs rounded border font-medium cursor-help ${app.aiScore >= 70
-                                                                                ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800'
-                                                                                : app.aiScore >= 40
-                                                                                    ? 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800'
-                                                                                    : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800'
+                                                                            ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800'
+                                                                            : app.aiScore >= 40
+                                                                                ? 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800'
+                                                                                : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800'
                                                                             }`}>
                                                                             🤖 {app.aiScore}
                                                                         </span>

@@ -4,7 +4,7 @@ import axios from 'axios';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../config/api';
 
 export default function ImageUpload({ value, onChange, label = 'Upload Image' }) {
     const [uploading, setUploading] = useState(false);

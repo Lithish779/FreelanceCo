@@ -15,7 +15,7 @@ import {
     HiX
 } from 'react-icons/hi';
 
-const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL as API_URL } from '../config/api';
 
 export default function UserProfile() {
     const { username } = useParams();

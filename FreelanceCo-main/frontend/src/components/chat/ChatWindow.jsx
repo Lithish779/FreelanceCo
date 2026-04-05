@@ -9,7 +9,7 @@ import ContractProposalModal from './ContractProposalModal';
 import ContractCard from './ContractCard';
 import { useAuth } from '../../context/AuthContext';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../../config/api';
 
 export default function ChatWindow({ conversation, onBack }) {
     const { user } = useAuth();
@@ -335,8 +335,8 @@ export default function ChatWindow({ conversation, onBack }) {
                                     )}
                                     <div
                                         className={`px-4 py-2 rounded-2xl ${isMine
-                                                ? 'bg-emerald-700 text-white rounded-br-sm'
-                                                : 'bg-white/85 dark:bg-emerald-950/45 text-gray-800 dark:text-gray-200 border border-emerald-100 dark:border-emerald-900/50 rounded-bl-sm'
+                                            ? 'bg-emerald-700 text-white rounded-br-sm'
+                                            : 'bg-white/85 dark:bg-emerald-950/45 text-gray-800 dark:text-gray-200 border border-emerald-100 dark:border-emerald-900/50 rounded-bl-sm'
                                             }`}
                                     >
                                         <p className="text-sm whitespace-pre-wrap wrap-break-word">

@@ -26,7 +26,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { Checkbox } from '../components/ui/Checkbox';
 import { showToast } from '../components/Toast';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../config/api';
 
 const WORK_PHASES = [
     { key: 'planning', label: 'Planning' },

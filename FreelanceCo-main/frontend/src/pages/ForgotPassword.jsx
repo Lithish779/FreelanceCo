@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import Particles from '../components/ui/background';
+import { API_BASE_URL } from '../config/api';
 
 export default function ForgotPassword() {
     const [identifier, setIdentifier] = useState('');
@@ -96,7 +97,7 @@ export default function ForgotPassword() {
         }
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/forgot-password`, {
+            const response = await fetch(`${API_BASE_URL}/auth/forgot-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

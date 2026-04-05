@@ -24,7 +24,7 @@ import {
 } from 'react-icons/hi';
 import { RxReset } from 'react-icons/rx';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../config/api';
 
 const STEPS = [
     { id: 1, name: 'Basic Info', icon: HiOutlineDocumentText },
