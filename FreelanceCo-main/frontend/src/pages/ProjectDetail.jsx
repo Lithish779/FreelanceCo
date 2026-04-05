@@ -16,7 +16,7 @@ import {
 import { authService } from '../services/authService';
 import { useAuth } from '../context/AuthContext';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../config/api';
 
 export default function ProjectDetail() {
     const { id } = useParams();

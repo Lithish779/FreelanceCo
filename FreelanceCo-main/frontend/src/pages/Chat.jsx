@@ -7,7 +7,7 @@ import socketService from '../services/socketService';
 import ConversationsList from '../components/chat/ConversationsList';
 import ChatWindow from '../components/chat/ChatWindow';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+import { API_BASE_URL } from '../config/api';
 
 export default function Chat() {
     const [searchParams, setSearchParams] = useSearchParams();

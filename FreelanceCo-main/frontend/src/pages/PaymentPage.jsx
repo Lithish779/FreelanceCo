@@ -10,7 +10,7 @@ import {
     HiOutlineBriefcase,
     HiOutlineArrowLeft
 } from 'react-icons/hi';
-
+import { API_BASE_URL } from '../config/api';
 const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_Rqm0GwJb97hPsJ';
 
 const PaymentPage = () => {
@@ -123,7 +123,7 @@ const PaymentPage = () => {
         try {
             const token = localStorage.getItem('authToken');
             const verifyResponse = await axios.post(
-                `${import.meta.env.VITE_API_BASE_URL}/api/payments/verify`,
+                `${API_BASE_URL}/api/payments/verify`,
                 {
                     razorpay_order_id: paymentResponse.razorpay_order_id,
                     razorpay_payment_id: paymentResponse.razorpay_payment_id,

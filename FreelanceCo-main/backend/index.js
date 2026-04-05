@@ -41,7 +41,8 @@ const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:3000',
-    process.env.FRONTEND_URL
+    'https://freelance-co.vercel.app',
+    process.env.FRONTEND_URL?.replace(/\/$/, '') // Remove trailing slash if present
 ].filter(Boolean);
 console.log('Allowed origins:', allowedOrigins);
 app.use(cors({
