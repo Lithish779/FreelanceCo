@@ -18,3 +18,8 @@ frontend/.env.*
 .DS_Store
 .vscode/
 .idea/
+
+# README files (ignored as requested)
+README.md
+backend/README.md
+frontend/README.md
