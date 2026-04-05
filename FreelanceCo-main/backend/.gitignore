@@ -33,6 +33,3 @@ yarn-debug.log*
 yarn-error.log*
 backend/config/firebase-service-account.json
 *service-account*.json
-
-# README files (ignored)
-README.md
