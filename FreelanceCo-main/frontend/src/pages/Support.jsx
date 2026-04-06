@@ -11,7 +11,7 @@ import { API_BASE_URL } from '../config/api';
 
 export default function Support() {
     const [openFaqIndex, setOpenFaqIndex] = useState(0);
-    const supportEmail = 'veenu7184@gmail.com';
+    const supportEmail = 'lithishkumar779@gmail.com';
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(supportEmail)}&su=${encodeURIComponent('FreelanceCo Support')}`;
     const [aiQuestion, setAiQuestion] = useState('');
     const [aiAnswer, setAiAnswer] = useState('');
